@@ -11,6 +11,7 @@ import './App.css';
 import Products from './components/Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/Hero';
+import ScrollToTop from './components/ScrollToTop';
 
 
 function App() {
@@ -40,6 +41,7 @@ function Home() {
       <Services />
       <Testimonials />
       <Contact />
+      <ScrollToTop/>
     </div>
   );
 }

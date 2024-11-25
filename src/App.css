@@ -1,0 +1,20 @@
+/* Global reset for consistent styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Ensure the body and html fit the viewport */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent scrolling outside the viewport */
+body {
+  position: relative;
+  overflow-x: hidden;
+}

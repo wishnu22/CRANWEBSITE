@@ -3,7 +3,7 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero bg-primary text-white text-center py-5">
+    <section className="hero bg-secondary text-white text-center py-5">
       <div className="container">
         <h1 className="display-4">Welcome to Cranvalor</h1>
         <p className="lead">Innovating Health and Beauty with Technology</p>

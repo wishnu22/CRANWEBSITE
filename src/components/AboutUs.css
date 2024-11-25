@@ -1,0 +1,29 @@
+.about-us {
+  background-color: #f8f9fa; /* Light grey background */
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #343a40; /* Dark text */
+  margin-bottom: 1rem;
+}
+
+.about-subtitle {
+  font-size: 1.5rem;
+  color: #28a745; /* Primary color for headings */
+  margin-top: 1.5rem;
+}
+
+.about-text {
+  font-size: 1rem;
+  color: #6c757d; /* Muted text */
+  line-height: 1.8;
+}
+
+.about-us img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

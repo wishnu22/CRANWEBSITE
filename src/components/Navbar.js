@@ -1,11 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./Navbar.css";
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark">
+    <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
     <div className="container">
-      <a className="navbar-brand" href="s">
+      <a className="navbar-brand" href="#about">
        
         Cranvalor
       </a>
@@ -35,6 +35,11 @@ const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#products">
                 Products
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#services">
+                Services
               </a>
             </li>
             <li className="nav-item">

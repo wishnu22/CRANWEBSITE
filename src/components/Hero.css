@@ -16,6 +16,7 @@
   }
   
   .hero p {
+    color: black;
     font-size: 1.25rem;
     font-weight: 400;
     margin-bottom: 30px;
@@ -31,7 +32,7 @@
   }
   
   .hero .btn:hover {
-    background-color: #28a745;
+    background-color: black;
     color: #fff;
   }
   

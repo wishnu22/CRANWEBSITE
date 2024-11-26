@@ -13,7 +13,7 @@ const Hero = () => {
       </div>
       <h1>Welcome to Cranvalor Innovations</h1>
       <p>Your gateway to a healthier, more beautiful, and tech-driven world.</p>
-      <a href="#products" className="btn btn-light btn-lg">Explore Products</a>
+      <a href="#products" id="explrbtn" className="btn btn-light btn-lg">Explore Products</a>
     </section>
   );
 };

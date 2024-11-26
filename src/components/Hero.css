@@ -1,39 +1,43 @@
 .hero {
   position: relative;
+  text-align: center;
   background: url('../images/heoimg.jpg') center center/cover no-repeat;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
-  overflow: hidden;
+  padding: 80px 0;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-
-.hero h1 {
+h1 {
   font-size: 3rem;
-  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 1.5rem;
-  margin-top: 20px;
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
 }
-.hero .btn {
-  margin-top:10%;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 12px 30px;
-  border-radius: 5px;
-  text-transform: uppercase;
+
+#explrbtn {
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+  background: linear-gradient(135deg, #ff7f50, #FFD700);
+  color: white;
+  border-radius: 50px;
   transition: all 0.3s ease;
 }
 
-.hero .btn:hover {
-  background-color: black;
-  color: #fff;
+.btn:hover {
+  background: linear-gradient(135deg, #FFD700, #ff7f50);
+  transform: scale(1.05);
 }
-
-
 
 .lighting-effect {
   position: absolute;
@@ -43,93 +47,131 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 100%;
   height: 100%;
+  z-index: 5;
 }
 
 .ball {
   position: absolute;
-  font-size: 1.2rem;
-  font-weight: bold;
+  font-size: 18px;
   color: white;
+  padding: 12px 25px;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.7));
+  border-radius: 25px;
   text-align: center;
-  border-radius: 50%;
-  padding: 15px;
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-  animation: float 6s ease-in-out infinite, moveBall 6s ease-in-out infinite;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  animation: moveBalls 6s infinite linear;
+  transition: transform 1s ease, box-shadow 0.3s ease;
 }
 
-.ball-1 {
-  background-color: #32CD32;
-  animation-delay: 0s;
-}
+.ball-1 { animation-delay: 0s; }
+.ball-2 { animation-delay: 1s; }
+.ball-3 { animation-delay: 2s; }
+.ball-4 { animation-delay: 3s; }
+.ball-5 { animation-delay: 4s; }
 
-.ball-2 {
-  background-color: #FF69B4;
-  animation-delay: 1s;
-}
-
-.ball-3 {
-  background-color: #FFD700;
-  animation-delay: 2s;
-}
-
-.ball-4 {
-  background-color: #00BFFF;
-  animation-delay: 3s;
-}
-
-.ball-5 {
-  background-color: #FF4500;
-  animation-delay: 4s;
-}
-
-
-@keyframes float {
+@keyframes moveBalls {
   0% {
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    transform: translate(-50%, -150%) scale(1.2);
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -50%) scale(1);
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
   }
 }
 
-@keyframes moveBall {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  25% {
-    transform: translateX(100px) translateY(50px);
-  }
-  50% {
-    transform: translateX(200px) translateY(100px);
-  }
-  75% {
-    transform: translateX(150px) translateY(150px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
+/* Position balls around the button */
+.lighting-effect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
+.ball-1 { top: 0; left: 50%; transform-origin: 50% 100%; }
+.ball-2 { top: 10%; left: 80%; transform-origin: 50% 50%; }
+.ball-3 { top: 50%; left: 100%; transform-origin: 50% 50%; }
+.ball-4 { top: 90%; left: 80%; transform-origin: 50% 50%; }
+.ball-5 { top: 100%; left: 50%; transform-origin: 50% 0%; }
+
+.ball:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Mobile-first responsive styles */
 @media (max-width: 768px) {
   .hero {
-    height: 50vh; /* Adjust the height for mobile screens */
-    padding: 50px 20px; /* Adjust padding for mobile */
+    padding: 60px 0;
+    height: 50vh;
   }
 
-  .hero h1 {
-    font-size: 2rem;
+  h1 {
+    font-size: 2.5rem;
   }
 
-  .hero p {
+  p {
     font-size: 1rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .lighting-effect {
+    width: 80%;
+    height: 80%;
   }
 
   .ball {
-    font-size: 1rem;
-    padding: 10px;
+    font-size: 16px;
+    padding: 10px 20px;
+    background: radial-gradient(circle, rgba(255, 165, 0, 0.8), rgba(255, 0, 0, 0.7));
   }
+
+  .ball-1 { top: 20%; left: 50%; }
+  .ball-2 { top: 10%; left: 70%; }
+  .ball-3 { top: 50%; left: 85%; }
+  .ball-4 { top: 80%; left: 70%; }
+  .ball-5 { top: 90%; left: 50%; }
+}
+
+/* For very small screens (mobile) */
+@media (max-width: 480px) {
+  .hero {
+    padding: 40px 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .lighting-effect {
+    width: 70%;
+    height: 70%;
+  }
+
+  .ball {
+    font-size: 14px;
+    padding: 8px 18px;
+  }
+
+  .ball-1 { top: 15%; left: 50%; }
+  .ball-2 { top: 5%; left: 60%; }
+  .ball-3 { top: 45%; left: 75%; }
+  .ball-4 { top: 75%; left: 60%; }
+  .ball-5 { top: 85%; left: 50%; }
 }

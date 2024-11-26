@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./Contact.css";
 const Contact = () => {
   return (
     <div id="contact" className="contact-section py-5">
@@ -67,7 +67,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <button type="submit" className="btn btn-success">
+              <button type="submit" id="fmbtnr" className="btn btn-success">
                 Send Message
               </button>
             </form>

@@ -1,37 +1,43 @@
-
-
-
-
-
-
-
 import React from 'react';
 import './Feature.css';
-import qlty from '../images/high-quality.png';
-import afrdbl from '../images/affordable.png';
-import sprt from '../images/customer-support.png';
+import { FaCogs, FaUserShield, FaLeaf, FaHandshake, FaGlobe } from 'react-icons/fa';
+
+const featuresRowOne = [
+  { icon: <FaCogs />, title: 'Innovation', description: 'Tech-driven solutions for modern lifestyles.' },
+  { icon: <FaUserShield />, title: 'Customer Support', description: 'Round-the-clock assistance for all your needs.' },
+  { icon: <FaLeaf />, title: 'Sustainability', description: 'Eco-friendly and ethical manufacturing practices.' },
+  { icon: <FaHandshake />, title: 'Affordable', description: 'Quality meets affordability for everyone.' },
+];
+
+const featuresRowTwo = [
+  { icon: <FaGlobe />, title: 'Global Reach', description: 'Providing solutions worldwide.' },
+  { icon: <FaLeaf />, title: 'Health & Wellness', description: 'Innovative supplements for a healthy life.' },
+  { icon: <FaCogs />, title: 'Advanced Tech', description: 'Utilizing cutting-edge technology for better living.' },
+  { icon: <FaHandshake />, title: 'Trust', description: 'Building long-term relationships with customers.' },
+];
+
 const Feature = () => {
   return (
-    <div className="features"id="features">
-     <div className="feature-container">
-  <div className="feature-card">
-    <img src={qlty} alt="Health" />
-    <h3>High Quality</h3>
-    <p>Our products are made with the finest ingredients and quality-controlled processes to ensure top-notch standards.</p>
-  </div>
-  <div className="feature-card">
-    <img src={afrdbl} alt="Beauty" />
-    <h3>Affordable</h3>
-    <p>We provide premium quality at affordable prices, making wellness accessible to everyone.</p>
-  </div>
-  <div className="feature-card">
-    <img src={sprt} alt="Tech" />
-    <h3>Customer Support</h3>
-    <p>Our dedicated team is available 24/7 to help with any questions or issues you may have.</p>
-  </div>
-</div>
-
-    </div>
+    <section className="feature-section">
+      <div className="carousel-row row-one">
+        {featuresRowOne.map((feature, index) => (
+          <div className="feature-card" key={index}>
+            <div className="icon">{feature.icon}</div>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+          </div>
+        ))}
+      </div>
+      <div className="carousel-row row-two">
+        {featuresRowTwo.map((feature, index) => (
+          <div className="feature-card" key={index}>
+            <div className="icon">{feature.icon}</div>
+            <h3>{feature.title}</h3>
+            <p>{feature.description}</p>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

@@ -1,86 +1,100 @@
-.features {
-  padding: 60px 0;
-  background-color: #f4f4f4;
+/* Base Styling */
+.feature-section {
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+  position: relative;
+  overflow: hidden;
 }
 
-.feature-container {
+.carousel-row {
   display: flex;
-  justify-content: center;
-  align-items: stretch;
   gap: 20px;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px 0;
+}
+
+.row-one {
+  animation: scroll-right 12s linear infinite;
+}
+
+.row-two {
+  animation: scroll-left 14s linear infinite;
 }
 
 .feature-card {
-  background-color: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 30px;
+  flex: 0 0 250px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
-  width: 300px; /* Ensuring equal size */
-  max-width: 100%;
-  min-height: 350px; /* Ensuring same height */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* For better content alignment */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.feature-card img {
-  width: 90px;                 /* Set the width of the icon */
-  height: 90px;                /* Set the height of the icon */
-  border-radius: 50%;          /* Makes the icon round */
-  background-color: #f1f5f1;   /* Green background color for the circle */
-  padding: 15px;               /* Adds space inside the circle around the icon */
-  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4); /* Green shadow */
-  display: block;              /* Makes sure it's a block element */
-  margin-left: auto;           /* Centers the icon */
-  margin-right: auto;          /* Centers the icon */
-  object-fit: contain;         /* Ensures the image fits within the circle without distortion */
-}
-
-
-
-.feature-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #333;
-  font-weight: bold;
-}
-
-.feature-card p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.5;
-  flex-grow: 1;
-}
-
 .feature-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Media Queries */
+.icon {
+  font-size: 40px;
+  background: radial-gradient(circle, #34eb77, #1f956a);
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Animations */
+@keyframes scroll-right {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  50% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-  .feature-container {
-    flex-direction: column;
-    align-items: center;
+  .carousel-row {
+    flex-wrap: nowrap;
+    animation: none; /* Stop animations for better UX on small screens */
   }
 
   .feature-card {
-    width: 90%;
-    margin-bottom: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .feature-card h3 {
-    font-size: 1.25rem;
-  }
-
-  .feature-card p {
-    font-size: 0.9rem;
+    flex: 0 0 90%;
+    margin: 10px auto;
   }
 }

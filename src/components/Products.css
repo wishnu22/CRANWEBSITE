@@ -1,63 +1,108 @@
-.container {
-  margin-top: 20px;
+.product-section {
+  padding: 50px;
+  background-color: #f9f9f9;
 }
 
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: #333;
+.web-service-introduction {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.web-service-introduction h2 {
+  font-size: 2.5rem;
   margin-bottom: 20px;
 }
 
-.products {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
-.product {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  text-align: center;
-  max-width: 250px;
-  flex: 1 1 calc(25% - 20px); /* Responsive grid layout */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.product:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-}
-
-.product img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 10px;
-}
-
-.product h3 {
+.web-service-introduction p {
   font-size: 1.2rem;
-  color: #222;
-  margin: 10px 0 5px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
 }
 
-.product p {
-  font-size: 0.9rem;
-  color: #666;
+.service-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;  /* Added for responsiveness */
 }
 
+.service-images img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-images {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;  /* Added for responsiveness */
+}
+
+.product-item {
+  text-align: center;
+  flex: 1 1 200px;  /* Allow items to grow and shrink, with a min width */
+  margin-bottom: 20px;
+}
+
+.product-item img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-item p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333;
+}
+.wheyexpla{
+ font-style: italic;
+  color:#555;
+  font-size: 1.5rem;
+}
+
+/* Media queries for responsiveness */
 @media (max-width: 768px) {
-  .products {
-    flex-direction: column;
-    align-items: center;
+  .web-service-introduction h2 {
+    font-size: 2rem;
   }
 
-  .product {
-    flex: 1 1 100%;
+  .web-service-introduction p {
+    font-size: 1rem;
+  }
+
+  .service-images {
+    flex-direction: column;  /* Stack images vertically on smaller screens */
+  }
+
+  .product-images {
+    flex-direction: column;  /* Stack product items vertically */
+    align-items: center;  /* Center align the products */
+  }
+
+  .product-item {
+    flex: 1 1 80%;  /* Ensure each product item takes up most of the width */
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .web-service-introduction h2 {
+    font-size: 1.5rem;
+  }
+
+  .product-item img {
+    max-width: 150px;
+    height: 150px;  /* Adjust image size for smaller screens */
+  }
+
+  .product-item p {
+    font-size: 1rem;
   }
 }

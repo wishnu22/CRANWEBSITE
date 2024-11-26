@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="lighting-effect">
         <div className="ball ball-1">Health</div>
         <div className="ball ball-2">Beauty</div>
-        <div className="ball ball-3">Feature</div>
+        <div className="ball ball-3">Future</div>
         <div className="ball ball-4">Tech</div>
         <div className="ball ball-5">Style</div>
       </div>

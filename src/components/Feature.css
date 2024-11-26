@@ -51,7 +51,7 @@
 }
 
 .feature-card {
-  flex: 0 0 25%; /* Each card takes 25% of the row */
+  flex: 0 0 25%; /* Default for desktop: 4 cards per row */
   text-align: center;
   padding: 20px;
   background: #fff;
@@ -59,7 +59,7 @@
   margin: 0 10px;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   border-radius: 12px;
-  position: relative; /* For pseudo-elements */
+  position: relative;
 }
 
 .feature-card .icon {
@@ -81,33 +81,44 @@
   line-height: 1.5;
 }
 
+/* Tablet View */
 @media (max-width: 768px) {
   .feature-card {
-    flex: 0 0 50%; /* Adjust for smaller screens */
+    flex: 0 0 50%; /* 2 cards per row */
     margin: 0 5px;
   }
 
   .features-wrapper {
-    height: 160px; /* Reduce height for mobile */
-  }
-}
-
-@media (max-width: 480px) {
-  .features-container {
-    padding: 20px 10px;
+    height: 180px; /* Adjust height for smaller screens */
   }
 
-  .feature-card {
-    flex: 0 0 75%; /* Further adjust for smaller screens */
-    margin: 0 5px;
-  }
-
-  .features-wrapper {
-    height: 140px; /* Reduce height for mobile */
+  .feature-card .icon {
+    font-size: 2rem;
   }
 
   .feature-card h3 {
     font-size: 1.2rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 480px) {
+  .feature-card {
+    flex: 0 0 90%; /* 1 card per row */
+    margin: 0 auto 20px; /* Center align and add spacing */
+  }
+
+  .features-wrapper {
+    height: auto; /* Allow height to adjust automatically */
+    flex-wrap: wrap; /* Wrap cards to new rows */
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
   }
 
   .feature-card p {

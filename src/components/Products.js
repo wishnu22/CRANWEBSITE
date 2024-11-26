@@ -29,7 +29,7 @@ const Product = () => {
       
       {/* Whey Protein Products Section */}
       <div className="product-images">
-        <h3>Our Products</h3>
+        <h3>Our Health supplements</h3>
         <div className="product-item">
           <img src={vanila} alt="Whey Protein 1" />
           <p>Whey Protein Isolate</p>

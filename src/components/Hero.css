@@ -115,6 +115,11 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 40vh; /* Adjust the height for mobile screens */
+    padding: 50px 20px; /* Adjust padding for mobile */
+  }
+
   .hero h1 {
     font-size: 2rem;
   }

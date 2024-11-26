@@ -1,19 +1,19 @@
 import React from "react";
-import './Hero.css';
+import "./Hero.css";
 
 const Hero = () => {
   return (
     <section className="hero">
-      <div className="lighting-effect">
-        <div className="ball ball-1">Health</div>
-        <div className="ball ball-2">Beauty</div>
-        <div className="ball ball-3">Future</div>
-        <div className="ball ball-4">Tech</div>
-        <div className="ball ball-5">Style</div>
+      <div className="fireball-container">
+        <div className="fireball fireball-1">Health</div>
+        <div className="fireball fireball-2">Beauty</div>
+        <div className="fireball fireball-3">Future</div>
+        <div className="fireball fireball-4">Tech</div>
+        <div className="fireball fireball-5">Style</div>
       </div>
       <h1>Welcome to Cranvalor Innovations</h1>
-      <p>Your gateway to a healthier, more beautiful, and tech-driven world.</p>
-      <a href="#products" id="explrbtn" className="btn btn-light btn-lg">Explore Products</a>
+      <p><strong>Your gateway to a healthier, more beautiful, and tech-driven world.</strong></p>
+      <a href="#products" className="explore-btn">Explore</a>
     </section>
   );
 };

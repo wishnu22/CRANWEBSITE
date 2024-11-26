@@ -30,12 +30,7 @@ const testimonials = [
     review:
       "The flavors are fantastic, and I feel energized after every use. Cranvalor truly delivers on its promise!",
   },
-  {
-    id: 5,
-    name: "Arav",
-    image:{arav},
-    review:"The quality is top-notch, and I love how it supports my fitness goals while keeping me energized throughout the day."
-  }
+
 ];
 
 const Testimonials = () => {

@@ -1,74 +1,86 @@
-.feature-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  height: 300px; /* Ensures all cards are the same height */
-  width: 100%; /* Allows flexibility within a grid layout */
-  max-width: 300px; /* Ensures uniform size for larger screens */
-}
-
-.feature-card:hover {
-  transform: translateY(-5px);
-}
-
-.feature-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  color: #007bff;
-  width: 80px;
-  height: 80px;
-  background-color: #e0f0ff;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.feature-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.feature-description {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.5;
+.features {
+  padding: 60px 0;
+  background-color: #f4f4f4;
 }
 
 .feature-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: stretch;
   gap: 20px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.feature-card {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  width: 300px; /* Ensuring equal size */
+  max-width: 100%;
+  min-height: 350px; /* Ensuring same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* For better content alignment */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card img {
+  width: 90px;                 /* Set the width of the icon */
+  height: 90px;                /* Set the height of the icon */
+  border-radius: 50%;          /* Makes the icon round */
+  background-color: #f1f5f1;   /* Green background color for the circle */
+  padding: 15px;               /* Adds space inside the circle around the icon */
+  box-shadow: 0 4px 10px rgba(0, 255, 0, 0.4); /* Green shadow */
+  display: block;              /* Makes sure it's a block element */
+  margin-left: auto;           /* Centers the icon */
+  margin-right: auto;          /* Centers the icon */
+  object-fit: contain;         /* Ensures the image fits within the circle without distortion */
+}
+
+
+
+.feature-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Media Queries */
 @media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .feature-card {
-    height: auto; /* Adjusts for smaller screens */
-    max-width: 100%; /* Expands to fill available space */
+    width: 90%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature-card h3 {
+    font-size: 1.25rem;
   }
 
-  .feature-icon {
-    font-size: 2.5rem;
-    width: 60px;
-    height: 60px;
-  }
-
-  .feature-title {
-    font-size: 1.1rem;
-  }
-
-  .feature-description {
+  .feature-card p {
     font-size: 0.9rem;
   }
 }

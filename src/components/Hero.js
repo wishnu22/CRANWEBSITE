@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
 import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero bg-secondary text-white text-center py-5">
-      <div className="container">
-        <h1 className="display-4">Welcome to Cranvalor</h1>
-        <p className="lead">Innovating Health and Beauty with Technology</p>
-        <p className="lead">"Cranvalor Innovations Pvt. Ltd. is a pioneer in merging technology with health and beauty. As a trusted manufacturer of premium whey protein and a forward-thinking tech company, we are committed to delivering unparalleled solutions for a healthier, more vibrant you."</p>
-        <a href="#products" className="btn btn-light btn-lg">Explore Products</a>
+    <section className="hero">
+      <div className="lighting-effect">
+        <div className="ball ball-1">Health</div>
+        <div className="ball ball-2">Beauty</div>
+        <div className="ball ball-3">Feature</div>
+        <div className="ball ball-4">Tech</div>
+        <div className="ball ball-5">Style</div>
       </div>
+      <h1>Welcome to Cranvalor Innovations</h1>
+      <p>Your gateway to a healthier, more beautiful, and tech-driven world.</p>
+      <a href="#products" className="btn btn-light btn-lg">Explore Products</a>
     </section>
   );
 };

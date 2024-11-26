@@ -12,8 +12,6 @@ import Products from './components/Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/Hero';
 import ScrollToTop from './components/ScrollToTop';
-import FloatingElements from './components/FloatingElements';
-
 
 
 
@@ -47,7 +45,7 @@ function Home() {
       <Testimonials />
       <Contact />
       <ScrollToTop/>
-      <FloatingElements />
+    
     </div>
   );
 }

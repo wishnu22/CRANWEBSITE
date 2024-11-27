@@ -7,7 +7,7 @@ const Hero = () => {
       <div className="fireball-container">
         <div className="fireball fireball-1">Health</div>
         <div className="fireball fireball-2">Beauty</div>
-        <div className="fireball fireball-3">Technology</div>
+        <div className="fireball fireball-3">Tech</div>
         <div className="fireball fireball-4">Style</div>
       </div>
       <h1 className="hero-heading">Welcome to <span className="highlight">Cranvalor Innovations</span></h1>

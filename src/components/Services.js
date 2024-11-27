@@ -6,16 +6,16 @@ const Services = () => {
     <section className="services" id="services">
       <h2>Our Services</h2>
       <div className="services-container">
-        <div className="service-item">
-          <h3>Whey Protein Manufacturing</h3>
+        <div className="service-item one">
+         
           <p>We offer high-quality whey protein in various forms to meet diverse needs, from unflavored isolated protein to custom-flavored options.</p>
         </div>
-        <div className="service-item">
-          <h3>Personalized Solutions</h3>
+        <div className="service-item two">
+         
           <p>Emphasizing the tech-driven approach to personal health and beauty.</p>
         </div>
-        <div className="service-item">
-          <h3>Tech Innovations for Health & Beauty</h3>
+        <div className="service-item three">
+        
           <p>AI-powered beauty,From tracking health metrics to offering virtual consultations, it demonstrates how tech supports well-being.</p>
         </div>
         

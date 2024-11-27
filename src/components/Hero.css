@@ -9,6 +9,7 @@
   height: 100vh;
 }
 
+/* Hero Heading */
 .hero-heading {
   font-size: 3rem;
   font-weight: 700;
@@ -18,11 +19,11 @@
 }
 
 .hero-heading .highlight {
-  color:#00bcd4;
+  color: #00bcd4;
   font-style: italic;
-  
 }
 
+/* Hero Subheading */
 .hero-subheading {
   font-size: 1.5rem;
   margin-bottom: 30px;
@@ -46,7 +47,7 @@
   position: absolute;
   width: 70px;
   height: 70px;
-  background: linear-gradient(90deg, #08f3f3, #eaece8);
+  background: linear-gradient(90deg, #08f3f3, #f6f8fa);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -63,12 +64,11 @@
 .fireball-2 { top: 50%; right: 0; transform: translate(50%, -50%); }
 .fireball-3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
 .fireball-4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
-/* .fireball-5 { top: 50%; left: 50%; transform: translate(-50%, -50%); } */
 
 /* Explore Button */
 .explore-btn {
   position: relative;
-  z-index: 2;
+  z-index: 2;  /* Ensure button is above fireballs */
   padding: 14px 50px;
   background: linear-gradient(90deg, #08f3f3, #f6f8fa);
   color: white;
@@ -82,8 +82,10 @@
   box-shadow: 0 5px 15px rgba(255, 127, 80, 0.6);
   transition: background 0.3s ease, box-shadow 0.3s ease;
   top: 110px;
+  margin-top: 20px; /* Added margin to prevent button from being too close to the top */
 }
 
+/* Explore Button Hover Effects */
 .explore-btn:hover {
   background: linear-gradient(90deg, #0ea2dd, #f5f1f0);
   box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8);
@@ -95,11 +97,20 @@
   100% { transform: rotate(360deg); }
 }
 
-/* Media Queries */
+/* Mobile Specific Adjustments */
 @media (max-width: 768px) {
   .hero {
     padding: 80px 10px;
     height: 80vh;
+  }
+
+  /* Ensure Explore button is always visible */
+  .explore-btn {
+    padding: 10px 40px;
+    font-size: 1.2rem;
+    margin-top: 30px;  /* Increased margin for proper visibility */
+    position: relative;  /* Ensure it's visible */
+    top: auto;  /* Remove top positioning */
   }
 
   .fireball-container {
@@ -111,10 +122,5 @@
     width: 50px;
     height: 50px;
     font-size: 0.6rem;
-  }
-
-  .explore-btn {
-    padding: 10px 40px;
-    font-size: 1.2rem;
   }
 }

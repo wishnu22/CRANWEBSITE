@@ -1,14 +1,21 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
+
 const Navbar = () => {
+  const handleNavLinkClick = () => {
+    const navbarCollapse = document.getElementById("navbarNav");
+    if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
+    }
+  };
+
   return (
     <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
-    <div className="container">
-      <a className="navbar-brand" href="#about">
-       
-        Cranvalor
-      </a>
+      <div className="container">
+        <a className="navbar-brand" href="#about">
+          Cranvalor
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -23,27 +30,43 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link" href="#about">
+              <a className="nav-link" href="#about" onClick={handleNavLinkClick}>
                 About Us
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#features">
+              <a
+                className="nav-link"
+                href="#features"
+                onClick={handleNavLinkClick}
+              >
                 Features
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#products">
+              <a
+                className="nav-link"
+                href="#products"
+                onClick={handleNavLinkClick}
+              >
                 Products
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
+              <a
+                className="nav-link"
+                href="#services"
+                onClick={handleNavLinkClick}
+              >
                 Services
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <a
+                className="nav-link"
+                href="#contact"
+                onClick={handleNavLinkClick}
+              >
                 Contact
               </a>
             </li>

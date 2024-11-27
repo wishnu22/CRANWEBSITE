@@ -29,7 +29,7 @@ const Product = () => {
   }, []);
 
   return (
-    <section  className="product-section">
+    <section id='explore' className="product-section">
       <div className="web-service-introduction">
         <h2>Our Web Service: Health, Beauty & Style for the Modern World</h2>
         <p>

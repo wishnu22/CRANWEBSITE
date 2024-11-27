@@ -12,6 +12,7 @@ import Products from './components/Products';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Hero from './components/Hero';
 import ScrollToTop from './components/ScrollToTop';
+import ServiceVideo from './components/ServiceVideo';
 
 
 
@@ -42,6 +43,7 @@ function Home() {
       <Feature /> 
       <Products />
       <AboutUs />
+      <ServiceVideo />
       <Services />
       <Testimonials />
       <Contact />

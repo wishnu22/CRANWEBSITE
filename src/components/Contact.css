@@ -1,7 +1,15 @@
 .contact-section {
-    background-color: #f8f9fa;
+  background: linear-gradient(to bottom, #001f3f, #007bff);
   }
-  
+  .contact-section h2{
+    color: white;
+  }
+  .contact-section h4{
+    color: white;
+  }
+  .contact-section p{
+    color: white;
+  }
   .section-title {
     font-size: 2.5rem;
     font-weight: bold;

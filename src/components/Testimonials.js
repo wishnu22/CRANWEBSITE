@@ -1,6 +1,6 @@
 import React from "react";
 import "./Testimonials.css";
-import arav from "../images/arav.jpg"
+
 const testimonials = [
   {
     id: 1,

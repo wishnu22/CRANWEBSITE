@@ -67,6 +67,7 @@
   font-size: 1.2rem;
 }
 
+
 /* Media queries for responsiveness */
 @media (max-width: 768px) {
   .web-service-introduction h2 {

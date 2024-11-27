@@ -61,9 +61,9 @@ const Product = () => {
           <img src={mango} alt="Whey Protein 4" />
           <p>Custom Whey Protein Blends</p>
         </div>
-        <p>
-          At <strong>Cranvalor Innovations</strong>, we pride ourselves on producing high-quality whey protein.
-        </p>
+        <p className='wheyexpla'>
+          At <strong>Cranvalor Innovations</strong>, we pride ourselves on producing <strong>high-quality whey protein.</strong>
+          Cranvalor Whey Protein Powder stands as India’s best and a global sensation in health supplements. Renowned for its superior quality and exceptional results, it’s crafted to meet international standards, making it a top choice worldwide. Powering fitness enthusiasts across continents, Cranvalor combines purity, taste, and performance like no other. Trusted by millions, it’s not just India’s pride but a global bestseller. Choose Cranvalor—where the best meets the world!</p>
       </div>
     </section>
   );

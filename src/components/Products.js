@@ -29,7 +29,7 @@ const Product = () => {
   }, []);
 
   return (
-    <section id="products" className="product-section">
+    <section  className="product-section">
       <div className="web-service-introduction">
         <h2>Our Web Service: Health, Beauty & Style for the Modern World</h2>
         <p>
@@ -41,14 +41,14 @@ const Product = () => {
           Health Technology
           <img src={style} alt="Style Tech" />
           Style Technology
-          <img src={fitness} alt="Fitness Tech" />
+          <img id="products" src={fitness} alt="Fitness Tech" />
           Fitness Technology
         </div>
       </div>
 
       {/* Whey Protein Products Section */}
       <div className="product-images">
-        <h3>Our Health Supplements</h3>
+        <h3 >Our Health Supplements</h3>
         <div className="product-item">
           <img src={vanila} alt="Whey Protein 1" />
           <p>Whey Protein Isolate</p>

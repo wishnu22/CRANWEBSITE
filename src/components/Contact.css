@@ -1,5 +1,5 @@
 .contact-section {
-  background: linear-gradient(to bottom, #001f3f, #007bff);
+  background: linear-gradient(to bottom, #343a40, #f6f8fa);
   }
   .contact-section h2{
     color: white;
@@ -29,9 +29,7 @@
   form button {
     border-radius: 5px;
     padding: 10px 20px;
+   
     
   }
 
-  #frmbtn{
-    background: #28a745;
-  }

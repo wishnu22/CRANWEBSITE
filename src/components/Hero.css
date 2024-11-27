@@ -25,7 +25,7 @@
   position: absolute;
   width: 70px;
   height: 70px;
-  background: linear-gradient(90deg, #FF7F50, #FFD700);
+  background: linear-gradient(90deg, #077ef5, #f6f8fa);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -42,14 +42,14 @@
 .fireball-2 { top: 50%; right: 0; transform: translate(50%, -50%); }
 .fireball-3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
 .fireball-4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
-.fireball-5 { top: 15%; left: 15%; transform: translate(-50%, -50%); }
+.fireball-5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
 /* Explore Button */
 .explore-btn {
   position: relative;
   z-index: 2;
   padding: 14px 50px;
-  background: linear-gradient(90deg, #FF7F50, #FFD700);
+  background: linear-gradient(90deg, #0679ec, #f6f8fa);
   color: white;
   font-size: 1.6rem;
   font-weight: bold;
@@ -64,7 +64,7 @@
 }
 
 .explore-btn:hover {
-  background: linear-gradient(90deg, #FFD700, #FF4500);
+  background: linear-gradient(90deg, #0ea2dd, #f5f1f0);
   box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8);
 }
 

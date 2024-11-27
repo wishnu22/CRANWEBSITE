@@ -34,11 +34,15 @@ const Product = () => {
         <h2>Our Web Service: Health, Beauty & Style for the Modern World</h2>
         <p>
           At <strong>Cranvalor Innovations</strong>, we bridge the gap between <strong>technology</strong> and <strong>wellness</strong>.
+          Our products are a blend of innovation and quality, crafted to enhance health, beauty, and style. With cutting-edge technology and premium ingredients, we bring solutions that cater to modern needs, ensuring affordability and excellence for a global audience.
         </p>
         <div className="service-images">
           <img src={health} alt="Health Tech" />
+          Health Technology
           <img src={style} alt="Style Tech" />
+          Style Technology
           <img src={fitness} alt="Fitness Tech" />
+          Fitness Technology
         </div>
       </div>
 

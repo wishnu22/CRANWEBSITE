@@ -42,7 +42,7 @@
 .fireball-2 { top: 50%; right: 0; transform: translate(50%, -50%); }
 .fireball-3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
 .fireball-4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
-.fireball-5 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+/* .fireball-5 { top: 50%; left: 50%; transform: translate(-50%, -50%); } */
 
 /* Explore Button */
 .explore-btn {

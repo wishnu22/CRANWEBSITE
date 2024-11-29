@@ -7,48 +7,111 @@
   background: url('../images/heroimg.jpg') center center/cover no-repeat;
   overflow: hidden;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Hero Heading */
 .hero-heading {
-  margin-top: 30px;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 3.5rem;
+  font-weight: 800;
   margin-bottom: 20px;
   color: #ffffff;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 2s ease-in-out;
 }
 
 .hero-heading .highlight {
-  color: #00bcd4;
+  color: #08f3f3;
   font-style: italic;
+  text-shadow: 3px 3px 10px rgba(8, 243, 243, 0.7);
 }
 
 /* Hero Subheading */
 .hero-subheading {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   margin-bottom: 30px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.8;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 2.5s ease-in-out;
 }
 
-/* Fireball Container (Around Explore Button) */
+/* Explore Button */
+.explore-btn {
+  position: relative;
+  z-index: 2;
+  padding: 15px 50px;
+  background: linear-gradient(90deg, #08f3f3, #ffffff);
+  color: #000;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(8, 243, 243, 0.4);
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 3s ease-in-out;
+}
+
+.explore-btn:hover {
+  background: linear-gradient(90deg, #0ea2dd, #e0faff);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(8, 243, 243, 0.6);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+
+  .hero-subheading {
+    font-size: 1.2rem;
+  }
+
+  .explore-btn {
+    padding: 12px 40px;
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Fireball Container Positioned at the Bottom */
 .fireball-container {
   position: absolute;
-  top: 50%;
+  bottom: 5%; /* Position slightly above the bottom edge */
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 250px;
-  height: 250px;
-  animation: rotate 10s linear infinite;
-  z-index: 1;
+  transform: translateX(-50%);
+  width: 300px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Spacing between fireballs */
+  z-index: 2; /* Ensure visibility above the background */
 }
 
+/* Individual Fireballs */
 .fireball {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(90deg, #08f3f3, #f6f8fa);
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(90deg, #08f3f3, #eaece8);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -58,65 +121,30 @@
   font-weight: bold;
   text-shadow: 0 0 10px rgba(235, 238, 240, 0.8);
   box-shadow: 0 0 20px rgba(26, 113, 194, 0.6);
+  animation: riseAndFade 3s infinite ease-in-out;
 }
 
-/* Positioning Balls Around the Explore Button */
-.fireball-1 { top: 0; left: 50%; transform: translate(-50%, -50%); }
-.fireball-2 { top: 50%; right: 0; transform: translate(50%, -50%); }
-.fireball-3 { bottom: 0; left: 50%; transform: translate(-50%, 50%); }
-.fireball-4 { top: 50%; left: 0; transform: translate(-50%, -50%); }
-
-/* Explore Button */
-.explore-btn {
-  position: relative;
-  z-index: 2;  /* Ensure button is above fireballs */
-  padding: 14px 50px;
-  background: linear-gradient(90deg, #08f3f3, #f6f8fa);
-  color: white;
-  font-size: 1.6rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 30px;
-  text-transform: uppercase;
-  text-decoration: none;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(255, 127, 80, 0.6);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-  top: 110px;
-  margin-top: 20px; /* Added margin to prevent button from being too close to the top */
+/* Rise and Fade Animation */
+@keyframes riseAndFade {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-15px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-/* Explore Button Hover Effects */
-.explore-btn:hover {
-  background: linear-gradient(90deg, #0ea2dd, #f5f1f0);
-  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.8);
-}
-
-/* Rotational Animation */
-@keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Mobile Specific Adjustments */
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-  .hero {
-    padding: 80px 10px;
-    height: 80vh;
-  }
-
-  /* Ensure Explore button is always visible */
-  .explore-btn {
-    padding: 10px 40px;
-    font-size: 1.2rem;
-    margin-top: 30px;  /* Increased margin for proper visibility */
-    position: relative;  /* Ensure it's visible */
-    top: auto;  /* Remove top positioning */
-  }
-
   .fireball-container {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    bottom: 10%;
   }
 
   .fireball {

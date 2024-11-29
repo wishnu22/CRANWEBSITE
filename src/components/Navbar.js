@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
       <div className="container">
-        <a className="navbar-brand" href="#about">
+        <a className="navbar-brand" href="#hero">
           Cranvalor
         </a>
         <button

@@ -11,7 +11,9 @@ footer .container {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    
 }
+
 
 footer .footer-links {
     display: flex;
@@ -35,6 +37,7 @@ footer .footer-links a {
 
 footer .footer-links a:hover {
     text-decoration: underline;
+    color:#00bcd4 ;
 }
 
 footer .social-icons {
@@ -51,7 +54,7 @@ footer .social-icons a {
 }
 
 footer .social-icons a:hover {
-    color: #ff9900;
+    color: #00bcd4;
 }
 
 footer .copyright {
